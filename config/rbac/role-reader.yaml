@@ -1,0 +1,70 @@
+---
+apiVersion: rbac.authorization.k8s.io/v1
+kind: Role
+metadata:
+  creationTimestamp: null
+  name: ack-ec2-reader
+  namespace: default
+rules:
+- apiGroups:
+  - ec2.services.k8s.aws
+  resources:
+  - capacityreservations
+  - carriergateways
+  - clientvpnendpoints
+  - clientvpnroutes
+  - customergateways
+  - defaultsubnets
+  - defaultvpcs
+  - egressonlyinternetgateways
+  - fpgaimages
+  - fleets
+  - images
+  - instanceexporttasks
+  - internetgateways
+  - keypairs
+  - launchtemplates
+  - launchtemplateversions
+  - localgatewayroutes
+  - localgatewayroutetablevpcassociations
+  - managedprefixlists
+  - natgateways
+  - networkacls
+  - networkaclentries
+  - networkinsightspaths
+  - networkinterfaces
+  - networkinterfacepermissions
+  - placementgroups
+  - reservedinstanceslistings
+  - routes
+  - routetables
+  - securitygroups
+  - snapshots
+  - spotdatafeedsubscriptions
+  - subnets
+  - trafficmirrorfilters
+  - trafficmirrorfilterrules
+  - trafficmirrorsessions
+  - trafficmirrortargets
+  - transitgateways
+  - transitgatewayconnects
+  - transitgatewayconnectpeers
+  - transitgatewaymulticastdomains
+  - transitgatewaypeeringattachments
+  - transitgatewayprefixlistreferences
+  - transitgatewayroutes
+  - transitgatewayroutetables
+  - transitgatewayvpcattachments
+  - vpcs
+  - vpcendpoints
+  - vpcendpointconnectionnotifications
+  - vpcendpointserviceconfigurations
+  - vpcpeeringconnections
+  - vpnconnections
+  - vpnconnectionroutes
+  - vpngateways
+  - volumes
+  verbs:
+  - get
+  - list
+  - watch
